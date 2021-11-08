@@ -30,9 +30,13 @@ const CardHeading: React.FC<ExpandableSectionProps> = ({
   tokenSymbol,
   depositFee,
 }) => {
+  let width = 72;
+  if(lpLabel === "JUTC") {
+    width = 48;
+  } 
   return (
     <Wrapper justifyContent="space-between" alignItems="center" mb="12px">
-      <Image src={`/images/farms/${farmImage}.png`} alt={tokenSymbol} width={64} height={64} />
+      <Image src={`/images/farms/${lpLabel}.png`} alt={tokenSymbol} width={width} height={48} />
       <Flex flexDirection="column" alignItems="flex-end">
         <Heading mb="4px">{lpLabel}</Heading>
         <Flex justifyContent="center">
