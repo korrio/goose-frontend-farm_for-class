@@ -31,12 +31,13 @@ const CardHeading: React.FC<ExpandableSectionProps> = ({
   depositFee,
 }) => {
   let width = 72;
+  const farmLogo = lpLabel.toLowerCase();
   if(lpLabel === "JUTC") {
     width = 48;
   } 
   return (
     <Wrapper justifyContent="space-between" alignItems="center" mb="12px">
-      <Image src={`/images/farms/${lpLabel}.png`} alt={tokenSymbol} width={width} height={48} />
+      <Image src={`/images/farms/${farmLogo}.png`} alt={tokenSymbol} width={width} height={48} />
       <Flex flexDirection="column" alignItems="flex-end">
         <Heading mb="4px">{lpLabel}</Heading>
         <Flex justifyContent="center">

@@ -11,7 +11,7 @@ import PageLoader from './components/PageLoader'
 
 // Route-based code splitting
 // Only pool is included in the main bundle because of it's the most visited page'
-const Home = lazy(() => import('./views/Home'))
+// const Home = lazy(() => import('./views/Home'))
 const Farms = lazy(() => import('./views/Farms'))
 // const Lottery = lazy(() => import('./views/Lottery'))
 // const Pools = lazy(() => import('./views/Pools'))
@@ -43,14 +43,15 @@ const App: React.FC = () => {
         <Suspense fallback={<PageLoader />}>
           <Switch>
             <Route path="/" exact>
-              <Home />
+              {/* <Home /> */}
+              <Farms />
             </Route>
             <Route path="/farms">
               <Farms />
             </Route>
-            <Route path="/nests">
+{/*            <Route path="/nests">
               <Farms tokenMode />
-            </Route>
+            </Route> */}
             {/* <Route path="/pools"> */}
             {/*  <Pools /> */}
             {/* </Route> */}
